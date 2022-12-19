@@ -1,14 +1,14 @@
 Arguments: 
-  /Users/annatillack/.nvm/versions/node/v14.17.0/bin/node /usr/local/bin/yarn start
+  /usr/local/bin/node /usr/local/bin/yarn add node-sass
 
 PATH: 
-  /Users/annatillack/.nvm/versions/node/v14.17.0/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.8/bin
+  /Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.8/bin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  14.17.0
+  14.15.4
 
 Platform: 
   darwin x64
@@ -22,6 +22,7 @@ npm manifest:
       "@testing-library/jest-dom": "^5.16.5",
       "@testing-library/react": "^13.4.0",
       "@testing-library/user-event": "^13.5.0",
+      "axios": "^1.2.1",
       "react": "^18.2.0",
       "react-autocomplete": "^1.8.1",
       "react-dom": "^18.2.0",
@@ -48,8 +49,7 @@ npm manifest:
       ],
       "development": [
         "last 1 chrome version",
-        "last 1 firefox version",
-        "lastsource ~/.bashrc 1 safari version"
+        "last 1 firefox version"
       ]
     }
   }
@@ -2382,6 +2382,14 @@ Lockfile:
     version "4.6.0"
     resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.6.0.tgz#1d07514866fa51262734b3357932fcf86961383a"
   
+  axios@^1.2.1:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.1.tgz#44cf04a3c9f0c2252ebd85975361c026cb9f864a"
+    dependencies:
+      follow-redirects "^1.15.0"
+      form-data "^4.0.0"
+      proxy-from-env "^1.1.0"
+  
   axobject-query@^2.2.0:
     version "2.2.0"
     resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
@@ -3938,7 +3946,7 @@ Lockfile:
     version "3.2.7"
     resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   
-  follow-redirects@^1.0.0:
+  follow-redirects@^1.0.0, follow-redirects@^1.15.0:
     version "1.15.2"
     resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   
@@ -3969,6 +3977,14 @@ Lockfile:
   form-data@^3.0.0:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.1.tgz#ebd53791b78356a99af9a300d4282c4d5eb9755f"
+    dependencies:
+      asynckit "^0.4.0"
+      combined-stream "^1.0.8"
+      mime-types "^2.1.12"
+  
+  form-data@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
     dependencies:
       asynckit "^0.4.0"
       combined-stream "^1.0.8"
@@ -6413,6 +6429,10 @@ Lockfile:
       forwarded "0.2.0"
       ipaddr.js "1.9.1"
   
+  proxy-from-env@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  
   psl@^1.1.33:
     version "1.9.0"
     resolved "https://registry.yarnpkg.com/psl/-/psl-1.9.0.tgz#d0df2a137f00794565fcaf3b2c00cd09f8d5a5a7"
@@ -8065,16 +8085,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c react-scripts start
-  Directory: /Users/annatillack/Desktop/git-basic
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:376:20)
-      at maybeClose (internal/child_process.js:1055:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)
+  Error: Found incompatible module
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at checkOne (/usr/local/lib/node_modules/yarn/lib/cli.js:62444:11)
+      at Object.check (/usr/local/lib/node_modules/yarn/lib/cli.js:62463:5)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:22803:73
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:109:13
